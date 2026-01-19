@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+        "chatgpt": {
+            "command": "bun",
+            "args": [
+                "run",
+                "/Users/YOUR_USER/path/to/claude-chatgpt-mcp/index.ts"
+            ],
+            "env": {}
+        }
+    }
+}
