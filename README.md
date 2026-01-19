@@ -4,7 +4,7 @@
 > 
 > 요구사항 분석부터 구현, 그리고 엄격한 감사까지 소프트웨어 개발 수명 주기(SDLC) 전체를 관리하는 완전 자율 에이전틱 DevOps 프레임워크입니다.
 
-![Version](https://img.shields.io/badge/Version-v2.1-blueviolet) ![Status](https://img.shields.io/badge/Status-Operational-success) ![License](https://img.shields.io/badge/License-MIT-green)
+![Version](https://img.shields.io/badge/Version-v2.1-blueviolet) ![Status](https://img.shields.io/badge/Status-Operational-success) ![License](https://img.shields.io/badge/License-ISC-blue)
 
 ---
 
