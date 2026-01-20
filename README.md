@@ -89,6 +89,7 @@ npm run dev
 ## � 향후 로드맵 (Future Roadmap)
 
 시스템의 안정성과 확장성을 위해 다음과 같은 핵심 업그레이드가 계획되어 있습니다. 상시 분석을 완료했으며, 순차적으로 적용될 예정입니다.
+docs/upgrade_packs 업그레이드 방법 추가
 
 ### v2.2: 설명 가능하고 결정적인 자동화 (Deterministic Automation) 🗺️
 - **의사결정 원장 (Decision Ledger):** 모든 결정(`BACKEND_REQUIRED` 등)의 근거를 기록하여 블랙박스를 해소합니다.
