@@ -77,6 +77,7 @@
 ## 🚀 향후 로드맵 (Detailed Upgrade Roadmap)
 
 시스템의 안정성, 확장성, 그리고 엔터프라이즈급 거버넌스를 확보하기 위한 단계적 업그레이드 계획의 상세 기술 사양입니다.
+<a href="https://github.com/coreline-ai/antigravity_gemini_skills/tree/master/docs/upgrade_packs">Upgrade Packs</a>
 
 ### Phase 2: 실행 통제 및 정책 자동화 (Governance & Reliability)
 - **v2.1 (Current): Smart Design** 🛡️
