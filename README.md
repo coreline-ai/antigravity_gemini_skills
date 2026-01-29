@@ -3,7 +3,6 @@
 > **"코드는 직접 짜는 게 아니라, 조율(Orchestration)하는 것입니다."**
 > 
 > 요구사항 분석부터 구현, 그리고 엄격한 감사까지 소프트웨어 개발 수명 주기(SDLC) 전체를 관리하는 완전 자율 에이전틱 DevOps 프레임워크입니다.
-> 디자인에 특화된 고유의 기능 (개발 적용 예정)
 
 ![Version](https://img.shields.io/badge/Version-v2.1-blueviolet) ![Status](https://img.shields.io/badge/Status-Operational-success) ![License](https://img.shields.io/badge/License-ISC-blue)
 
@@ -57,67 +56,67 @@
 
 ---
 
-## 📂 테스트 산출물: 간단한 메모 앱 (Sample)
+## 📂 테스트 산출물: 간단한 메모 앱 (Sample Artifact)
 
-> **참고:** 이 기능은 시스템의 성능을 증명하기 위해 **100% 자율적으로 생성**되었습니다.
+> **참고:** 이 앱은 시스템의 성능을 증명하기 위해 **100% 자율적으로 생성**된 실제 산출물 예시입니다.
 
-### 📝 개요
-**Web (Next.js) + LocalStorage** 스택 결정 로직을 보여주기 위해 만들어진 가볍고 빠른 오프라인 메모 앱입니다.
-
-### 🏗️ 기술 스택 (에이전트가 결정함)
-- **Framework:** Next.js 14.2 (App Router)
+### 🏗️ 기술 스택 (에이전트 자율 결정)
+- **Framework:** Next.js 14+ (App Router)
 - **Language:** TypeScript
-- **State:** Zustand
-- **Storage:** Browser LocalStorage (서버 없음)
-- **Styling:** Tailwind CSS
+- **State Management:** Zustand
+- **Storage:** Browser LocalStorage
+- **Styling:** Tailwind CSS (Modern Aesthetics)
 
-### 📸 기능
-- **Zero-Config:** DB 설정 불필요. 열자마자 바로 사용 가능.
-- **CRUD:** 메모 생성, 조회, 수정, 삭제 즉시 반영.
-- **반응형 UI:** 데스크탑, 모바일 완벽 지원.
-- **다크 모드:** Tailwind 기반 자동 지원.
-
-### 💻 실행 방법
-```bash
-cd apps/web
-npm run dev
-# http://localhost:3000 접속
-```
+### 📸 주요 기능
+- **Zero-Config Deployment:** 데이터베이스 설정 없이 즉시 실행 가능.
+- **Persistent Data:** 로컬 스토리지를 통한 데이터 영속성 유지.
+- **Responsive & Dark Mode:** 모든 디바이스에서 최적화된 테마 지원.
 
 ---
 
-## � 향후 로드맵 (Future Roadmap)
+## 🚀 향후 로드맵 (Detailed Upgrade Roadmap)
 
-시스템의 안정성과 확장성을 위해 다음과 같은 핵심 업그레이드가 계획되어 있습니다. 상시 분석을 완료했으며, 순차적으로 적용될 예정입니다.
-docs/upgrade_packs 업그레이드 방법 추가
+시스템의 안정성, 확장성, 그리고 엔터프라이즈급 거버넌스를 확보하기 위한 단계적 업그레이드 계획의 상세 기술 사양입니다.
 
-### v2.2: 설명 가능하고 결정적인 자동화 (Deterministic Automation) 🗺️
-- **의사결정 원장 (Decision Ledger):** 모든 결정(`BACKEND_REQUIRED` 등)의 근거를 기록하여 블랙박스를 해소합니다.
-- **드라이런 모드 (Dry-run):** 실제 코드를 수정하기 전, 실행 계획을 미리 출력하고 사용자 승인을 받습니다.
-- **변경 영향 분석 (Change Impact):** PRD/Design 변경 시 영향 받는 범위를 자동으로 계산하여 불필요한 재작업을 방지합니다.
-- **작업 의존성 DAG:** 작업 간의 관계를 그래프로 관리하여 실패 시 필요한 부분만 골라 재시도합니다.
-- **자동 롤백 스냅샷:** 감사(Audit) 실패 시 즉시 마지막 정상 상태로 스냅샷 기반 복구를 수행합니다.
+### Phase 2: 실행 통제 및 정책 자동화 (Governance & Reliability)
+- **v2.1 (Current): Smart Design** 🛡️
+    - **목표:** Gap-driven Q&A를 통해 설계 단계의 모호성을 제거하고 정교한 `MASTER_PLAN.md` 구축.
+- **v2.2: Controlled Execution** 🗺️
+    - **목표:** 설명 가능하고 재현 가능한 자동화 프로세스 정립.
+    - **주요 기능:** 의사결정 원장(`DECISION_LOG.md`), 드라이런(`PLAN_OUTPUT.md`) 모드, 변경 영향 분석(`CHANGE_IMPACT_REPORT.md`), 자동 롤백 스냅샷(`SNAPSHOT_LOG.md`).
+- **v2.3: Policy-based Automation** ✅
+    - **목표:** 아키텍처 및 보안 규칙의 알고리즘적 강제.
+    - **핵심 도구:** `run_policy_checks.ts`, `POLICY_RULES.md`, `.orchestrator/state.json`. LLM 호출 예산 관리(`LLM_USAGE_LOG.md`) 도입.
 
-### v2.3: 정책 기반 거버넌스 (Policy-driven Governance) ✅
-- **OPA 스타일 정책 엔진:** `POLICY_RULES.md`를 통해 "하면 안 되는 것"을 명시적으로 관리합니다.
-- **자동 정책 검사 (Policy Gate):** 실행 직전 기술 스택 준수, 폴더 구조 무결성 등을 강제로 검사합니다.
-- **규정 준수 자동화:** 기획-개발-감사 전 과정에 걸쳐 프로젝트 고유의 정책을 일관되게 적용합니다.
+### Phase 3: 디자인 시스템 자동화 (Design Automation)
+- **v3.0: Design System Charter** 🎨
+    - **목표:** 디자인을 심미적 요소가 아닌 검증 가능한 '계약(Contract)'으로 관리.
+    - **핵심 사양:** `DESIGN_SYSTEM.md` v3.0, 토큰 기반 설계(`DESIGN_TOKENS.json`), WCAG AA 접근성 강제.
+- **v3.1: Operational Design Skill** 🚀
+    - **목표:** 실시간 디자인 품질 유지 및 자동 교정.
+    - **핵심 도구:** `autofix_tokens.py`, `compute_design_drift.py`, `generate_tokens.py`.
+
+### Phase 4: 엔터프라이즈 거버넌스 및 운영 (Enterprise Security & Ops)
+- **v4.0: Enterprise Governance** 🔐
+    - **목표:** 전사적 보안 정책 수립 및 CI 파이프라인 통합 게이트 구축.
+    - **핵심 기능:** `SECURITY_POLICY_RULES.md` (Secrets/Vulnerability/SAST), GitHub Actions 통합 정책 게이트(`policy-gates.yml`).
+- **v4.1: Change & Incident Management** 🔄
+    - **목표:** 공식적인 운영 프로세스 및 규정 준수 자동화.
+    - **표준 템플릿:** `CHANGE_REQUEST.md` (변경 요청), `INCIDENT.md` (사고 리포트), `EXCEPTIONS.md` (정책 예외 관리).
 
 ---
 
-## �📁 저장소 구조
+## 📁 저장소 구조 (Repository Structure)
 
-```
+```text
 .
-├── .agent/              # 🧠 두뇌 (The Brain)
-│   ├── skills/          # 에이전트 스킬 정의 (PM, Analyst, Dev, Auditor)
-│   └── workflows/       # 자동화 스크립트 (/new 커맨드 등)
-├── apps/                # 🏭 공장 (산출물)
-│   └── web/             # (Artifact) 메모 앱 소스코드
-├── docs/                # 📄 입력 문서
-│   ├── templates/       # 표준 템플릿 (PRD, TRD, DESIGN)
-│   └── PRD.md           # 현재 프로젝트 요구사항
-├── MASTER_PLAN.md       # 📜 계약서 (Analyst 작성)
-├── AUDIT_REPORT.md      # ✅ 합격증 (Auditor 작성)
-└── README.md            # 이 파일
+├── .agent/              # 🧠 에이전트 브레인 (Skills & Workflows)
+├── .orchestrator/       # ⚙️ 오케스트레이션 엔진 상태 및 리포트 (v2.2+)
+├── apps/                # 🏭 프로젝트 산출물 (web, mobile, shared)
+├── docs/                # 📄 가이드, 템플릿 및 업그레이드 팩
+│   └── upgrade_packs/   # 버전별 업그레이드 상세 기술 문서
+├── tools/               # 🛠️ 정책 검사, 토큰 생성 등 자동화 스크립트
+├── MASTER_PLAN.md       # 📜 프로젝트 설계 계약서
+├── AUDIT_REPORT.md      # ✅ 최종 품질 감사 레포트
+└── README.md            # 메인 가이드
 ```
